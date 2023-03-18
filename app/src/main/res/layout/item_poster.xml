@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="posterItem"
+            type="com.diagnal.programming.model.Content" />
+
+        <variable
+            name="onClick"
+            type="android.view.View.OnClickListener" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgPoster"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_margin="@dimen/_6sdp"
+        android:onClick="@{(v)->onClick.onClick(v)}"
+        android:scaleType="fitXY"
+        android:src="@drawable/poster1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <TextView
+        android:id="@+id/tvPosterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="@{(v)->onClick.onClick(v)}"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintStart_toStartOf="@id/imgPoster"
+        app:layout_constraintTop_toBottomOf="@id/imgPoster"
+        tools:text="BabySticker" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
